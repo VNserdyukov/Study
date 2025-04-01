@@ -1,5 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Тестируем Git");
+        System.out.println(20367%3600);
     }
 }
