@@ -19,7 +19,9 @@ public class Lesson03Return {
         if (summa == 0) {
             System.out.println("NO");
         }
-        System.out.println(summa);
+        else {
+            System.out.println(summa);
+        }
 
         //if (number % 100 == 0);
         //поиск суммы нечетных цифр
