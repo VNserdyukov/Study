@@ -22,8 +22,5 @@ public class Lesson03Return {
         else {
             System.out.println(summa);
         }
-
-        //if (number % 100 == 0);
-        //поиск суммы нечетных цифр
     }
 }
