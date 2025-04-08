@@ -2,47 +2,39 @@ import java.util.Scanner;
 
 public class Lesson22Switch02 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int number = scanner.nextInt();
-        switch (number) {
-            case 1:
-                System.out.println("Январь");
+        Scanner scan = new Scanner(System.in);
+        String day = scan.next();
+        switch (day) {
+            case "Понедельник":
+            case "понедельник":
+                System.out.println("Monday");
                 break;
-            case 2:
-                System.out.println("Февраль");
+            case "Вторник":
+            case "вторник":
+                System.out.println("Tuesday");
                 break;
-            case 3:
-                System.out.println("Март");
+            case "Среда":
+            case "среда":
+                System.out.println("Wednesday");
                 break;
-            case 4:
-                System.out.println("Апрель");
+            case "Четверг":
+            case "четверг":
+                System.out.println("Thursday");
                 break;
-            case 5:
-                System.out.println("Май");
+            case "Пятница":
+            case "пятница":
+                System.out.println("Friday");
                 break;
-            case 6:
-                System.out.println("Июнь");
+            case "Суббота":
+            case "суббота":
+                System.out.println("Saturday");
                 break;
-            case 7:
-                System.out.println("Июль");
-                break;
-            case 8:
-                System.out.println("Август");
-                break;
-            case 9:
-                System.out.println("Сентябрь");
-                break;
-            case 10:
-                System.out.println("Октябрь");
-                break;
-            case 11:
-                System.out.println("Ноябрь");
-                break;
-            case 12:
-                System.out.println("Декабрь");
+            case "Воскресенье":
+            case "воскресенье":
+                System.out.println("Sunday");
                 break;
             default:
-                System.out.println("Ошибка");
+                System.out.println("ERROR");
         }
     }
 }
