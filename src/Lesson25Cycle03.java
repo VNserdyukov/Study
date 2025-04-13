@@ -9,8 +9,12 @@ public class Lesson25Cycle03 {
             return;
         }
         for (int i = 1; i <= dan; i++) {
-            for (int j = 0; j <= dan ; j++) {
-                    System.out.print("*");
+            for (int j = 1; j <= dan ; j++) {
+                if (j < i) {
+                    System.out.print(" ");
+                    } else {
+                        System.out.print("*");
+                    }
                 }
             System.out.println();
             }
