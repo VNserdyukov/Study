@@ -5,9 +5,6 @@ public class Lesson26Break01 {
         Scanner scan = new Scanner(System.in);
         int dan = scan.nextInt();
         int sum = 0;
-        if (dan == 1) {
-            System.out.println("NO");
-        }
         for (int i = 1; i <= dan; i++) {
             if (dan % i == 0) {
                 sum++;
