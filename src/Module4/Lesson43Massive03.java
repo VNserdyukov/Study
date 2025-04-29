@@ -3,7 +3,7 @@ package Module4;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Lesson43Massive02 {
+public class Lesson43Massive03 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int[][] array = new int[scan.nextInt()][scan.nextInt()];
@@ -16,16 +16,17 @@ public class Lesson43Massive02 {
             System.out.println();
         }
 
-        System.out.println();
-        for (int j = 0; j < array[0].length; j++) {
-            int sum = 0;
-            for (int i = 0; i < array.length; i++) {
-                if (array[i][j] > 0) {
-                    sum += array[i][j];
+        SECOND:
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (array[i][j] < 0) {
+                    System.out.println(j);
+                    continue SECOND;
                 }
             }
-            System.out.print(sum + " ");
+            System.out.println("NO");
         }
 
     }
 }
+
