@@ -2,7 +2,7 @@ package Module5;
 
 import java.util.Scanner;
 
-public class Lesson05String07 {
+public class Lesson50String07 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String stroka = scan.nextLine();
