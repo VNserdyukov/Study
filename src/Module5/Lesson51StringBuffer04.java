@@ -5,16 +5,15 @@ import java.util.Scanner;
 public class Lesson51StringBuffer04 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int a = scan.nextInt();
-        int b = scan.nextInt();
-        String str = primer(a, b);
-        System.out.println(str);
+        String a = scan.nextLine();
+        String[] words = a.split("\\b");
+        System.out.println(words);
     }
 
-    public static String primer(int a, int b) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(a).append(" + ").append(b).append(" = ").append(a + b);
-        return sb.toString();
-    }
+//    public static String primer(int a) {
+//        StringBuilder sb = new StringBuilder();
+//        sb.append(a).append(" + ").append(b).append(" = ").append(a + b);
+//        return sb.toString();
+//    }
 
 }
