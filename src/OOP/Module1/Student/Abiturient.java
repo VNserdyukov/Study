@@ -1,4 +1,4 @@
-package OOP.Module1;
+package OOP.Module1.Student;
 
 public class Abiturient {
     String surname;
