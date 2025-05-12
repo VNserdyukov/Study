@@ -9,12 +9,11 @@ public class Employee {
 
     boolean isPensioner() {
         if (gender.equals("male") && age >= 63) return true;
-        if (gender.equals("female") && age >= 58) return true;
-        return false;
+        return gender.equals("female") && age >= 58;
     }
 
     void changeSalary(double koef) {
-        salary *= (int) koef;
+        salary = (int) (salary * koef);
     }
 
     void show() {
