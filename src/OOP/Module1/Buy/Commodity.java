@@ -1,8 +1,8 @@
 package OOP.Module1.Buy;
 
 public class Commodity {
-    static String name;
-    static int price;
+    String name;
+    int price;
 
     void show() {
         System.out.println("Наименование товара: " + name);
