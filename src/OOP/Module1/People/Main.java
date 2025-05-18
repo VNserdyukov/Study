@@ -5,15 +5,25 @@ import java.util.Scanner;
 public class Main {
     public static void main (String[] args) {
         Scanner scan = new Scanner(System.in);
-        Employee worker = new Employee();
-        worker.surname = scan.next();
-        worker.gender = scan.next();
-        worker.age = scan.nextInt();
-        worker.salary = scan.nextInt();
-        worker.koef = 0.9;
-        if (worker.isPensioner()) {
-            worker.changeSalary(worker.koef);
+        int mas = scan.nextInt();
+        if (mas < 0) {
+            System.out.println("ERROR");
+            return;
         }
-        worker.show();
+
+        Employee[] worker = new Employee[mas];
+        for (int i = 0; i < worker.length; i++) {
+            worker[i] = new Employee(scan.next(), scan.next(), scan.nextInt(), scan.nextInt());
+            if (worker[i].isPensioner()) {
+                worker[i].setSalary(90000);
+            }
+        }
+
+        for (Employee person:worker) {
+            if (person != null) {
+                person.show();
+            }
+        }
+
     }
 }
