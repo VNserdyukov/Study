@@ -5,11 +5,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        Material Стальной_Провод = new Material("steel", 7850);
-        Thing thing = new Thing("wire", Стальной_Провод, 0.03);
+        Thing thing = new Thing("wire", new Material("steel", 7850), 0.03);
         thing.show();
-        Material Медный_Провод = new Material("copper", 8500);
-        thing.setMaterial(Медный_Провод);
+        Material copper = new Material("copper", 8500);
+        thing.setMaterial(copper);
         thing.setVolume(scan.nextDouble());
         thing.show();
     }

@@ -2,7 +2,7 @@ package OOP.Module1.Material;
 
 public class Thing {
     private String name;
-    Material material;
+    private Material material;
     private double volume;
 
     public Thing() {
@@ -23,11 +23,11 @@ public class Thing {
     }
 
     public double getMass() {
-        return material.getDENSITY() * volume;
+        return material.getDensity() * volume;
     }
 
     public void show() {
-        System.out.println(name + ";" + material.getMATERIAL() + ";" + material.getDENSITY()
+        System.out.println(name + ";" + material.getMaterial() + ";" + material.getDensity()
                 + ";" + volume + ";" + getMass());
     }
 }

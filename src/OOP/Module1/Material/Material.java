@@ -1,20 +1,20 @@
 package OOP.Module1.Material;
 
 public class Material {
-    private final String MATERIAL;
-    private final int DENSITY;
+    private String material;
+    private int density;
 
     public Material(String material, int density) {
-        this.MATERIAL = material;
-        this.DENSITY = density;
+        this.material = material;
+        this.density = density;
     }
 
-    public String getMATERIAL() {
-        return MATERIAL;
+    public String getMaterial() {
+        return material;
     }
 
-    public int getDENSITY() {
-        return DENSITY;
+    public int getDensity() {
+        return density;
     }
 
 }
