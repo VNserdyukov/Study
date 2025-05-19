@@ -8,7 +8,7 @@ public class Main {
         Material Стальной_Провод = new Material("steel", 7850);
         Thing thing = new Thing("wire", Стальной_Провод, 0.03);
         thing.show();
-        Material Медный_Провод = new Material("cooper", 8500);
+        Material Медный_Провод = new Material("copper", 8500);
         thing.setMaterial(Медный_Провод);
         thing.setVolume(scan.nextDouble());
         thing.show();
