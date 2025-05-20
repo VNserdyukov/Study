@@ -7,6 +7,10 @@ public class Book {
     private int age;
 
     public Book() {
+        this.name = ";";
+        this.author = ";";
+        this.publisher = ";";
+        this.age = 0;
     }
 
     public Book(String name, String author, String publisher, int age) {
