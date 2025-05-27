@@ -70,5 +70,4 @@ public class Trial {
     public String toString() {
         return lastName + ";" + score1 + ";" + score2;
     }
-
 }
