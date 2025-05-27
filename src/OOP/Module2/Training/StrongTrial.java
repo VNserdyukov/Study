@@ -35,7 +35,7 @@ public class StrongTrial extends Trial{
 
     @Override
     public boolean isPassed() {
-        return timeToFinish <= limit;
+        return super.isPassed() && timeToFinish <= limit;
     }
 
     @Override

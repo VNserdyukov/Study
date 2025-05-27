@@ -9,8 +9,6 @@ public class Trial {
     //КОНСТРУКТОРЫ
 
     public Trial() {
-        this.score1 = 0;
-        this.score2 = 0;
     }
 
     public Trial(String lastName, int score1, int score2) {
@@ -21,8 +19,6 @@ public class Trial {
 
     public Trial(String lastName) {
         this.lastName = lastName;
-        this.score1 = 0;
-        this.score2 = 0;
     }
 
     //ГЕТТЕРЫ

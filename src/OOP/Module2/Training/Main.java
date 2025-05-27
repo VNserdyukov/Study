@@ -22,6 +22,29 @@ public class Main {
             }
         }
 
+        /* Пример преподавателя через switch
+        int n = scan.nextInt();
+        Trial[] list = new Trial[n];
+        for (int i = 0; i < list.length; i++) {
+            int type = scan.nextInt();
+            String name = scan.next();
+            int ball1 = scan.nextInt();
+            int ball2 = scan.nextInt();
+            switch (type) {
+                case 1:
+                    list[i] = new Trial(name, ball1, ball2);
+                    break;
+                case 2:
+                    list[i] = new LightTrial(name, ball1, ball2);
+                    break;
+                case 3:
+                    list[i] = new StrongTrial(name, ball1, ball2, scan.nextInt());
+                    break;
+                default:
+                    list[i] = null;
+        */
+
+
         for (Trial student : students) {
             System.out.println(student);
         }
