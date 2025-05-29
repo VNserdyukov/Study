@@ -49,17 +49,16 @@ public class Purchase {
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Purchase purchase = (Purchase) o;
-        return Objects.equals(commodity, purchase.commodity);
+        if (!(o instanceof Purchase purchase)) return false;
+        return amount == purchase.amount && Objects.equals(commodity, purchase.commodity);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(commodity);
+        return Objects.hash(commodity, amount);
     }
 
-    //МЕТОДЫ
+//МЕТОДЫ
 
     public int getCost() {
         return commodity.getPrice() * amount;

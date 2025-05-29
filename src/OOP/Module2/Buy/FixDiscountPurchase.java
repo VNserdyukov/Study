@@ -29,7 +29,7 @@ public class FixDiscountPurchase extends Purchase{
 
     @Override
     public int getCost() {
-        return (int) (super.getCost() * discount);
+        return (int) (super.getCost() - Math.floor(super.getCost() * discount));
     }
 
     @Override

@@ -38,11 +38,9 @@ public class Commodity {
 
     //ПЕРЕОПРЕДЕЛЕНИЯ
 
-
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Commodity commodity = (Commodity) o;
+        if (!(o instanceof Commodity commodity)) return false;
         return price == commodity.price && Objects.equals(name, commodity.name);
     }
 
