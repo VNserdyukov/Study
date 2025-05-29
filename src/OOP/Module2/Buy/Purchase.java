@@ -50,12 +50,12 @@ public class Purchase {
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof Purchase purchase)) return false;
-        return amount == purchase.amount && Objects.equals(commodity, purchase.commodity);
+        return Objects.equals(commodity, purchase.commodity);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(commodity, amount);
+        return Objects.hashCode(commodity);
     }
 
 //МЕТОДЫ
