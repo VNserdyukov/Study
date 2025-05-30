@@ -54,10 +54,4 @@ public class Commodity {
         return name + ';' + price;
     }
 
-    //МЕТОДЫ
-
-    void show() {
-        System.out.println("Наименование товара: " + name);
-        System.out.println("Цена товара: " + price);
-    }
 }

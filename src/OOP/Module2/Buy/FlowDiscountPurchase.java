@@ -43,10 +43,9 @@ public class FlowDiscountPurchase extends Purchase{
     @Override
     public int getCost() {
         if (getAmount() >= minAmount) {
-        return (int) (super.getCost() - Math.floor(super.getCost() * discount));
-        } else {
-            return super.getCost();
+            return super.getCost() - (int)(super.getCost() * discount);
         }
+        return super.getCost();
     }
 
     @Override

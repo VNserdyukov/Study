@@ -64,10 +64,4 @@ public class Purchase {
         return commodity.getPrice() * amount;
     }
 
-    public void show() {
-        commodity.show();
-        System.out.println("Количество: " + amount);
-        System.out.println("Стоимость покупки: " + getCost());
-    }
-
 }

@@ -34,19 +34,13 @@ public class Main {
             System.out.println(buys);
         }
 
-        int maxBuy = buy[0].getCost();
-        for (Purchase purchase : buy) {
-            if (purchase.getCost() > maxBuy) {
-                maxBuy = purchase.getCost();
-            }
-        }
-
+        int maxBuy = 0;
         for (int i = 0; i < buy.length; i++) {
-            if (buy[i].getCost() == maxBuy) {
-                System.out.println(i);
-                break;
+            if (buy[i].getCost() > buy[maxBuy].getCost()) {
+                maxBuy = i;
             }
         }
+        System.out.println(maxBuy);
 
         int sum = 0;
         for (int i = 0; i < buy.length - 1; i++) {
