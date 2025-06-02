@@ -8,9 +8,9 @@ public class Accountant extends Employee{
     public Accountant() {
     }
 
-    public Accountant(String surname, String gender, int age, int salary, String gruppa) {
+    public Accountant(String surname, String gender, int age, int salary, char gruppa) {
         super(surname, gender, age, salary);
-        this.gruppa = gruppa.charAt(0);
+        this.gruppa = gruppa;
     }
 
     //СЕТТЕРЫ

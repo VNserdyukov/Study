@@ -7,6 +7,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         int mas = scan.nextInt();
         Employee[] employee = new Employee[mas];
+
         for (int i = 0; i < employee.length; i++) {
             int type = scan.nextInt();
             String surname = scan.next();
@@ -21,36 +22,29 @@ public class Main {
                     employee[i] = new Programmer(surname, gender, age, salary, scan.next(), scan.next());
                     break;
                 case 3:
-                    employee[i] = new Accountant(surname, gender, age, salary, scan.next());
+                    //можно сканнер запустить в самом кейсе;
+                    String gruppa = scan.next();
+                    employee[i] = new Accountant(surname, gender, age, salary, gruppa.charAt(0));
                     break;
+                default:
+                    employee[i] = null;
             }
         }
-        for (int i = 0; i < employee.length; i++) {
-            if (employee[i] instanceof Employee employee1) {
-                employee1.show();
-                continue;
-            }
-            if (employee[i] instanceof Programmer programmer1) {
-                programmer1.show();
-                continue;
-            }
-            if (employee[i] instanceof  Accountant accountant1) {
-                accountant1.show();
+        for (Employee value : employee) {
+            if (value != null) {
+                value.show();
             }
         }
 
         int sum = 0;
-        for (Employee value : employee) {
-            sum += value.getSalary();
-        }
-        System.out.println(sum);
-
         int max = 0;
         for (int i = 0; i < employee.length; i++) {
+            sum += employee[i].getSalary();
             if (employee[i].getSalary() > employee[max].getSalary()) {
                 max = i;
             }
         }
+        System.out.println(sum);
         employee[max].show();
 
         System.out.println();
