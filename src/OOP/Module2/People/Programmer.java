@@ -39,7 +39,6 @@ public class Programmer extends Employee {
 
     @Override
     public void show() {
-        super.show();
-        System.out.println(";" + status);
+        System.out.println(getSurname() + ";" + getGender() + ";" + getAge() + ";" + getSalary() + ";" + status);
     }
 }

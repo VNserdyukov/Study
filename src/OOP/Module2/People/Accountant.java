@@ -29,7 +29,6 @@ public class Accountant extends Employee{
 
     @Override
     public void show() {
-        super.show();
-        System.out.println(";" + gruppa);
+        System.out.println(getSurname() + ";" + getGender() + ";" + getAge() + ";" + getSalary() + ";" + gruppa);
     }
 }
