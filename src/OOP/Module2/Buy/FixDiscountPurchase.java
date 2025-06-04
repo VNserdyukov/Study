@@ -26,7 +26,6 @@ public class FixDiscountPurchase extends Purchase{
 
     //ПЕРЕОПРЕДЕЛЕНИЯ
 
-
     @Override
     public int getCost() {
         return super.getCost() - (int) (super.getCost() * discount);
