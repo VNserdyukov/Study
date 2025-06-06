@@ -8,7 +8,7 @@ public abstract class Learner {
     //МЕТОДЫ
 
     public double averageGrade() {
-        return (double) (grade1 * grade2) / 2;
+        return (double) (grade1 + grade2) / 2;
     }
 
     public abstract int holidays();

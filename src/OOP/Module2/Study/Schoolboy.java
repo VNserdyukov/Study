@@ -11,6 +11,11 @@ public abstract class Schoolboy extends Learner {
         return super.toString() + ";" + school + ";" + classRoom;
     }
 
+    @Override
+    public int holidays() {
+        return 124;
+    }
+
     //КОНСТРУКТОРЫ
 
     public Schoolboy() {

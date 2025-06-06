@@ -28,6 +28,11 @@ public abstract class Student extends Learner {
         return super.toString() + ";" + university + ";" + group;
     }
 
+    @Override
+    public int holidays() {
+        return 74;
+    }
+
     //КОНСТРУКТОРЫ
 
     public Student() {
