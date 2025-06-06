@@ -1,6 +1,6 @@
 package OOP.Module2.Study;
 
-public abstract class Student extends Learner {
+public class Student extends Learner {
     private String university;
     private String group;
     private static int baseScholarship;
