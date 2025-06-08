@@ -34,7 +34,7 @@ public class Main {
 
         for (Pet pet : pets){
             if (pet instanceof Cat) {
-                System.out.println(pet);;
+                System.out.println(pet);
             }
         }
 
