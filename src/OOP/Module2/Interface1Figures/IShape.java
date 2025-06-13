@@ -1,4 +1,4 @@
-package OOP.Module2.Interface1;
+package OOP.Module2.Interface1Figures;
 
 public interface IShape {
     double computeSquare();

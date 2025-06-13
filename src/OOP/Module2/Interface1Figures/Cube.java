@@ -1,4 +1,4 @@
-package OOP.Module2.Interface1;
+package OOP.Module2.Interface1Figures;
 
 public class Cube implements IShape {
     private double side;

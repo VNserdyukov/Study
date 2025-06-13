@@ -1,4 +1,4 @@
-package OOP.Module2.Interface1;
+package OOP.Module2.Interface1Figures;
 
 public class Rectangle implements IShape {
     private double side1;

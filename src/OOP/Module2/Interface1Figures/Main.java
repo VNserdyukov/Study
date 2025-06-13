@@ -1,4 +1,4 @@
-package OOP.Module2.Interface1;
+package OOP.Module2.Interface1Figures;
 
 import java.util.Scanner;
 
