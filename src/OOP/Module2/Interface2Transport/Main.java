@@ -25,10 +25,8 @@ public class Main {
             if (transport.canCarry(weight)) {
                 transport.add(weight);
             }
-        }
-
-        for (Transport transport : transports) {
             System.out.println(transport);
         }
+
     }
 }

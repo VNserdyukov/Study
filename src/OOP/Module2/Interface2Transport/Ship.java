@@ -1,14 +1,14 @@
 package OOP.Module2.Interface2Transport;
 
 public class Ship implements Transport{
-    double maxWeight;
-    double totalWeight;
+    double maxWeight; //грузоподъемность
+    double totalWeight = 0; //текущий вес груза
 
     //МЕТОДЫ
 
     @Override
     public boolean canCarry(double weight) {
-        return maxWeight > weight;
+        return maxWeight + totalWeight > weight;
     }
 
     @Override
@@ -30,9 +30,6 @@ public class Ship implements Transport{
     }
 
     //КОНСТРУКТОРЫ
-
-    public Ship() {
-    }
 
     public Ship(double maxWeight) {
         this.maxWeight = maxWeight;
