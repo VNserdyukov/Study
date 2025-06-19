@@ -1,4 +1,4 @@
-package OOP.Module2.Exeption1RandomMassive;
+package OOP.Module2.Exception1RandomMassive;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
