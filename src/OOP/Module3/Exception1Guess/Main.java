@@ -1,4 +1,4 @@
-package OOP.Module2.Exception1Guess;
+package OOP.Module3.Exception1Guess;
 
 import java.util.Arrays;
 import java.util.Random;

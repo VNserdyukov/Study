@@ -1,4 +1,4 @@
-package OOP.Module2.Exception2Weight;
+package OOP.Module3.Exception2Weight;
 
 import java.util.Scanner;
 

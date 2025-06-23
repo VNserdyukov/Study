@@ -1,4 +1,4 @@
-package OOP.Module2.Exception2Parking;
+package OOP.Module3.Exception2Parking;
 
 import java.util.Scanner;
 

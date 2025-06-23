@@ -1,4 +1,4 @@
-package OOP.Module2.Exception2Baking;
+package OOP.Module3.Exception2Baking;
 
 public class Cook {
 
