@@ -7,25 +7,35 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int element = scan.nextInt();
-        while (element != ) {
+        int[] mas = null;
+        boolean isValidInput = true;
+
+        while (isValidInput) {
             try {
-            element = scan.nextInt();
+                int number = scan.nextInt();
+                mas = new int[number];
+                isValidInput = false;
+            } catch (NegativeArraySizeException e) {
+                     System.out.println("Введите положительный размер массива!");
+            } catch (InputMismatchException ex) {
+                System.out.println("Размер массива должен быть целым числом!");
+                scan.next(); //очистка буфера
+            }
         }
-        int [] mas = new int[0];
-        try {
-            mas = new int[scan.nextInt()];
-        } catch (InputMismatchException ex) {
-            System.out.println("Размер массива должен быть целым числом!");
-        } catch (NegativeArraySizeException e) {
-            System.out.println("Введите положительный размер массива");
-        }
-        scan.next();
         for (int i = 0; i < mas.length; i++) {
-            mas[i] = scan.nextInt();
+            try {
+                mas[i] = scan.nextInt();
+            } catch (InputMismatchException exc) {
+                mas[i] = 0;
+                scan.next(); //очистка буфера
+            }
         }
-        int index = scan.nextInt();
-        System.out.println("Извлечено из массива: " + mas[index]);
+        try {
+            int index = scan.nextInt();
+            System.out.println("Извлечено из массива: " + mas[index]);
+        } catch (ArrayIndexOutOfBoundsException | InputMismatchException e) {
+            System.out.println("Неверный индекс!");
+        }
         System.out.println(Arrays.toString(mas));
     }
 }
