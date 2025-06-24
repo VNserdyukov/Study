@@ -16,7 +16,7 @@ public class Main {
                 mas = new int[number];
                 isValidInput = false;
             } catch (NegativeArraySizeException e) {
-                     System.out.println("Введите положительный размер массива!");
+                System.out.println("Введите положительный размер массива!");
             } catch (InputMismatchException ex) {
                 System.out.println("Размер массива должен быть целым числом!");
                 scan.next(); //очистка буфера
