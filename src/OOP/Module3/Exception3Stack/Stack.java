@@ -16,13 +16,15 @@ public class Stack {
 
     public char pop() throws StackException {
         if (index == -1) throw new StackException("Попытка извлечь из пустого стека!");
-        return 0;
+        char tmp = mas[index];
+        index--;
+        return tmp;
     }
 
     public void print() throws StackException {
         if (index == -1) throw new StackException("Стек пуст");
-        for (char massive : mas) {
-            System.out.println(massive + " ");
+        for (int i = index; i > -1; i--) {
+            System.out.print(mas[i] + " ");
         }
         System.out.println();
     }
