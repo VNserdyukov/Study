@@ -12,8 +12,8 @@ public class Main {
         char sim;
         try {
             while (true) {
-                choice = scan.nextInt();
                 try {
+                choice = scan.nextInt();
                     switch (choice) {
                         case 1:
                             sim = scan.next().charAt(0);
