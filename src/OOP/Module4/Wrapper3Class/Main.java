@@ -7,7 +7,17 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         String data = scan.nextLine();
         String[] mas = data.split("#");
-
-        System.out.println();
+        double sum = 0.0;
+        for (String m : mas) {
+            if (!m.isEmpty()) {
+                try {
+                    double num = Double.parseDouble(m);
+                    sum += num;
+                } catch (NumberFormatException ignore) {
+                    //игнорируем не числовые значения
+                }
+            }
+        }
+        System.out.printf("%.1f", sum);
     }
 }
