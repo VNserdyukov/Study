@@ -1,4 +1,4 @@
-package OOP.Module4.Wrapper1Class;
+package OOP.Module4.WrapperClass.Wrapper1Class;
 
 import java.util.Scanner;
 
