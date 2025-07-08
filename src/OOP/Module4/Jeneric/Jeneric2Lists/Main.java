@@ -16,7 +16,25 @@ public class Main {
             double average = Double.parseDouble(parts[1]);
             int age = Integer.parseInt(parts[2]);
             Student student = new Student(parts[0], average, age);
-            if (average >= 18)
+            if (age >= 18) {
+                studentOld.add(String.valueOf(student));
+            } else {
+                studentYoung.add(String.valueOf(student));
+            }
         }
+        if (studentYoung.isEmpty()) {
+            System.out.print("Пустой список");
+        } else {
+            System.out.print(studentYoung);
+        }
+
+        System.out.println();
+
+        if (studentOld.isEmpty()) {
+            System.out.print("Пустой список");
+        } else {
+            System.out.print(studentOld);
+        }
+
     }
 }
