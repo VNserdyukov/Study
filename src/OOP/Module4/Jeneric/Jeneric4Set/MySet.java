@@ -14,6 +14,7 @@ public class MySet<E> {
         k = 0;
     }
 
+
     public void add(E elem) {
         if (k >= list.length) { //нет места
             E[] tmp = (E[]) new Object[list.length / 2 + list.length + 1]; //создаем новый массив и приводим к типу E[]
@@ -22,12 +23,22 @@ public class MySet<E> {
             }
             list = tmp; //считаем новый массив текущим
         }
-        list[k++] = elem; //записываем элемент и увеличиваем k в любом случае
+        boolean flag = false;
+        for (int i = 0; i < k; i++) {
+            if (elem.equals(list[i])) {
+                flag = true;
+            }
+        }
+        if (!flag) {
+            list[k++] = elem;
+        }
     }
 
     public void print() {
         for (int i = 0; i < list.length; i++) {
-            System.out.print(list[i] + " ");
+            if (list[i] != null) {
+                System.out.println(list[i]);
+            }
         }
     }
 }

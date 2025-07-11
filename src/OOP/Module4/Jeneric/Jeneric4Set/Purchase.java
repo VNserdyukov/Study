@@ -1,18 +1,18 @@
 package OOP.Module4.Jeneric.Jeneric4Set;
 
+import java.util.Objects;
+
 public class Purchase {
     private String name;
     private int price;
     private int quantity;
-
-    public Purchase() {
-    }
 
     public Purchase(String name, int price, int quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
     }
+
 
     public String getName() {
         return name;
@@ -44,12 +44,13 @@ public class Purchase {
     }
 
     @Override
-    public int hashCode() {
-        return super.hashCode();
+    public boolean equals(Object o) {
+        if (!(o instanceof Purchase purchase)) return false;
+        return price == purchase.price && Objects.equals(name, purchase.name);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public int hashCode() {
+        return Objects.hash(name, price);
     }
 }
