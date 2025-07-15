@@ -11,9 +11,7 @@ public class Main {
         Purchase[] purchases = new Purchase[scan.nextInt()];
         scan.nextLine();
         for (int i = 0; i < purchases.length; i++) {
-            String buffer = scan.nextLine();
-            String[] data = buffer.split(" ");
-            purchases[i] = new Purchase(data[0], Integer.parseInt(data[1]), Integer.parseInt(data[2]));
+            purchases[i] = new Purchase(scan.next(), scan.nextInt(), scan.nextInt());
         }
         sort(purchases, new Comparator<Purchase>() {
             @Override
