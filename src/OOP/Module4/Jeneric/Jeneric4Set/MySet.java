@@ -35,10 +35,8 @@ public class MySet<E> {
     }
 
     public void print() {
-        for (int i = 0; i < list.length; i++) {
-            if (list[i] != null) {
-                System.out.println(list[i]);
-            }
+        for (int i = 0; i < k; i++) {
+            System.out.println(list[i]);
         }
     }
 }

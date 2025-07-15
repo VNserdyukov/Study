@@ -1,7 +1,6 @@
 package OOP.Module4.Jeneric.Jeneric4Set;
 
 import java.util.Scanner;
-import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
