@@ -1,30 +1,37 @@
 package OOP.Module4.StandartInterface.Range;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-public class Range implements Iterable<Integer>, Iterator<Integer> {
+public class Range implements Iterable<Integer> {
     private int start;
     private int end;
-    private int count;
 
     public Range(int start, int end) {
         this.start = start;
         this.end = end;
-        count = start;
+    }
+
+    public Range() {
     }
 
     @Override
     public Iterator<Integer> iterator() {
-        return this;
+        return new RangeIterator();
     }
 
-    @Override
-    public boolean hasNext() {
-        return count != end + 1;
-    }
+    public class RangeIterator implements Iterator<Integer> {
+        int next = start;
 
-    @Override
-    public Integer next() {
-        return count++;
+        @Override
+        public boolean hasNext() {
+            return next <= end;
+        }
+
+        @Override
+        public Integer next() {
+            if (!hasNext()) throw new NoSuchElementException();
+            return next++;
+        }
     }
 }
