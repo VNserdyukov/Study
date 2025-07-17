@@ -36,7 +36,12 @@ public class Garage implements Iterable<Car> {
     }
 
     public int getFreeBoxNumber() {
-        return
+        for (int i = box.length - 1; i >= 0; i--) {
+            if (box[i] == null) {
+                return i + 1;
+            }
+        }
+        return -1;
     }
 
     @Override
