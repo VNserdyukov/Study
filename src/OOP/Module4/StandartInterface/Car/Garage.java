@@ -15,15 +15,15 @@ public class Garage implements Iterable<Car> {
 
     public void putCar(Car unit, int i) throws ErrorBoxException {
         int index = i - 1;
-        if (index < 0 || index >= box.length) throw new ErrorBoxException("ERROR");
-        if (box[index] != null) throw  new ErrorBoxException("ERROR");
+        if (index < 0 || index >= box.length) throw new ErrorBoxException("");
+        if (box[index] != null) throw  new ErrorBoxException("");
         box[index] = unit;
     }
 
     public Car getCar(int i) throws ErrorBoxException {
         int index = i - 1;
         if (index < 0 || index >= box.length) throw new ErrorBoxException("ERROR");
-        if (box[index] != null) throw  new ErrorBoxException("ERROR");
+        if (box[index] == null) throw  new ErrorBoxException("ERROR");
         Car car = box[index];
         box[index] = null;
         return car;
@@ -32,7 +32,7 @@ public class Garage implements Iterable<Car> {
     public boolean isFree(int number) {
         int index = number - 1;
         if (index < 0 || index >= box.length) return false;
-        return box[index] != null;
+        return box[index] == null;
     }
 
     public int getFreeBoxNumber() {

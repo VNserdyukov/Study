@@ -1,7 +1,5 @@
 package OOP.Module4.StandartInterface.Car;
 
-import java.util.Iterator;
-
 public class Car{
     private String brand;
     private double engine;
