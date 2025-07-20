@@ -1,4 +1,4 @@
-package OOP.Module5.Singleton;
+package OOP.Module5.SingletonSunSystem;
 
 public class Earth implements CelestialBody {
     private static volatile Earth earth;

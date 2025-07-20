@@ -1,4 +1,4 @@
-package OOP.Module5.Singleton;
+package OOP.Module5.SingletonSunSystem;
 
 public class Sun implements CelestialBody {
     private static volatile Sun sun;
