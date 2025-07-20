@@ -1,8 +1,13 @@
 package OOP.Module5.DekoratorEditing;
 
 public class NoExtraSpaces extends MessageDecorator {
+    private Message message;
+
+    public NoExtraSpaces() {
+    }
+
     public NoExtraSpaces(Message message) {
-        super(message);
+       this.message = message;
     }
 
     @Override

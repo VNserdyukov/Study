@@ -1,8 +1,13 @@
 package OOP.Module5.DekoratorEditing;
 
 public class CapitalLetters extends MessageDecorator {
+    private Message message;
+
+    public CapitalLetters() {
+    }
+
     public CapitalLetters(Message message) {
-        super(message);
+        this.message = message;
     }
 
     @Override

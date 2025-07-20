@@ -3,6 +3,9 @@ package OOP.Module5.DekoratorEditing;
 public class Message {
     private String message;
 
+    public Message() {
+    }
+
     public Message(String message) {
         this.message = message;
     }

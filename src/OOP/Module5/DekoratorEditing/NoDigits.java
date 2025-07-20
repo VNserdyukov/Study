@@ -1,8 +1,13 @@
 package OOP.Module5.DekoratorEditing;
 
 public class NoDigits extends MessageDecorator {
+    private Message message;
+
+    public NoDigits() {
+    }
+
     public NoDigits(Message message) {
-        super(message);
+        this.message = message;
     }
 
     @Override
