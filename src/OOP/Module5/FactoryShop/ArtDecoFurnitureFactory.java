@@ -1,0 +1,18 @@
+package OOP.Module5.FactoryShop;
+
+public class ArtDecoFurnitureFactory implements FurnitureFactory {
+    @Override
+    public Chair createChair() {
+        return new ArtDecoChair();
+    }
+
+    @Override
+    public Sofa createSofa() {
+        return new ArtDecoSofa();
+    }
+
+    @Override
+    public CoffeeTable createCoffeeTable() {
+        return new ArtDecoTable();
+    }
+}
