@@ -3,7 +3,7 @@ package OOP.Module5.ObserverInforming;
 import java.beans.*;
 
 public class Institution implements PropertyChangeListener {
-    private String name;
+    private final String name;
 
     public Institution(String name) {
         this.name = name;
@@ -11,7 +11,8 @@ public class Institution implements PropertyChangeListener {
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
-        System.out.println(name + " received information from " + evt.getPropertyName() + ":");
-        System.out.println(evt.getNewValue());
+        MessageInfo messageInfo = (MessageInfo) evt.getNewValue();
+        System.out.println(name + " received information from " + messageInfo.getSender() + ":");
+        System.out.println(messageInfo.getMessage());
     }
 }

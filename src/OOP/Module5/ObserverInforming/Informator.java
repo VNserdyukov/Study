@@ -3,13 +3,14 @@ package OOP.Module5.ObserverInforming;
 import java.beans.*;
 
 public class Informator {
-    private String name;
-    private String text;
-    private PropertyChangeSupport support;
+    private final String name;
+    private final PropertyChangeSupport support;
+    private String lastMessage;
 
     public Informator(String name) {
         this.name = name;
-        support = new PropertyChangeSupport(this);
+        this.support = new PropertyChangeSupport(this);
+        this.lastMessage = null;
     }
 
     public void addListener(PropertyChangeListener listener) {
@@ -20,8 +21,9 @@ public class Informator {
         support.removePropertyChangeListener(listener);
     }
 
-    void setText(String text) {
-        support.firePropertyChange(name, this.text, text);
-        this.text = text;
+    public void setText(String text) {
+        MessageInfo messageInfo = new MessageInfo(name, text);
+        support.firePropertyChange("message", lastMessage, messageInfo);
+        lastMessage = text;
     }
 }
