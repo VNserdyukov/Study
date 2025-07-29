@@ -1,4 +1,4 @@
-package BoostJava.Module1.InOutByte.StreamByteCompare;
+package BoostJava.Module1.InOutByte.ByteCompare;
 
 import java.io.FileInputStream;
 import java.io.IOException;

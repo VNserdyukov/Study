@@ -1,4 +1,4 @@
-package BoostJava.Module1.InOutByte.StreamByteFile;
+package BoostJava.Module1.InOutByte.ByteFile;
 
 import java.io.FileInputStream;
 import java.io.IOException;

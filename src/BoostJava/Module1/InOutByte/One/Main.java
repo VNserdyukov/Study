@@ -1,4 +1,4 @@
-package BoostJava.Module1.InOutByte.StreamOne;
+package BoostJava.Module1.InOutByte.One;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package BoostJava.Module1.InOutByte.StreamIRead;
+package BoostJava.Module1.InOutByte.IRead;
 
 import java.io.IOException;
 
