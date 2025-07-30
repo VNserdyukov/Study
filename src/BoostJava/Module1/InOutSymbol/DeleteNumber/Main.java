@@ -9,18 +9,13 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         char c;
         try {
-            c = (char) br.read();
-            while (c != '#') {
-                try {
-                    Integer.parseInt(String.valueOf(c));
-                    c = (char) br.read();
-                } catch (NumberFormatException e) {
+            while ((c = (char) br.read()) != '#') {
+                if (!Character.isDigit(c)) {
                     System.out.print(c);
-                    c = (char) br.read();
                 }
             }
         } catch (IOException ex) {
-            System.out.println("Ошибка ввода " + ex.getMessage());
+            System.out.println(ex.getMessage());
         }
     }
 }
