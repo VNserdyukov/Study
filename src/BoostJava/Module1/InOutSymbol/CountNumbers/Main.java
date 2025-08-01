@@ -6,17 +6,22 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
+        int count = 0;
+        double sum = 0;
         try (BufferedReader fr = new BufferedReader(
-                new FileReader("./src/BoostJava/Module1/InOutSymbol/CountNumbers/data2.txt"))) {
-            int count = 0;
-            int fileReader = fr.read();
-            while (fileReader != -1) {
-                if (fileReader >= '0' && fileReader <= '9') {
-                    count++;
+                new FileReader("./src/BoostJava/Module1/InOutSymbol/CalculateMiddle/data3.txt"))) {
+            String str;
+            while ((str = fr.readLine()) != null) {
+                String[] words = str.split(" +");
+                for (String item : words) {
+                    try {
+                        sum += Double.parseDouble(item);
+                        count++;
+                    } catch (NumberFormatException e) {
+                    }
                 }
-                fileReader = fr.read();
             }
-            System.out.println(count);
+            System.out.printf("%.2f", sum/count);
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
