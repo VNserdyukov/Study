@@ -6,7 +6,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Map<Integer, Integer> freq = new HashMap<>();
-
         while (sc.hasNext()) {
             String token = sc.next();
             if (token.equals("end")) break;
