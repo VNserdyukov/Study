@@ -3,29 +3,39 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         int n = sc.nextInt();
         int t = sc.nextInt();
         int[] floors = new int[n];
         for (int i = 0; i < n; i++) {
             floors[i] = sc.nextInt();
         }
-        int k = sc.nextInt() - 1;
+        int leaveIndex = sc.nextInt() - 1;
+        int leaveFloor = floors[leaveIndex];
+
         int minFloor = floors[0];
-        int maxFloor = floors[n - 1];
-        int kFloor = floors[k];
-        int answer = 100;
-        int timeToK = kFloor - minFloor;
-        if (timeToK <= t) {
-            answer = Math.min(answer, maxFloor - minFloor);
+        int maxFloor = floors[n-1];
+
+        int result = Integer.MAX_VALUE;
+
+        // Вариант 1: снизу вверх
+        int timeUp = leaveFloor - minFloor;
+        if (timeUp <= t) {
+            result = Math.min(result, maxFloor - minFloor);
         }
-        timeToK = maxFloor - kFloor;
-        if (timeToK <= t) {
-            answer = Math.min(answer, maxFloor - minFloor);
+
+        // Вариант 2: сверху вниз
+        int timeDown = maxFloor - leaveFloor;
+        if (timeDown <= t) {
+            result = Math.min(result, maxFloor - minFloor);
         }
-        int leftDist = kFloor - minFloor;
-        int rightDist = maxFloor - kFloor;
-        int total = Math.min(leftDist, rightDist) + (maxFloor - minFloor);
-        answer = Math.min(answer, total);
-        System.out.println(answer);
+
+        // Вариант 3: начать с leaveFloor
+        int leftDist = leaveFloor - minFloor;
+        int rightDist = maxFloor - leaveFloor;
+        int steps3 = Math.min(leftDist, rightDist) + (maxFloor - minFloor);
+        result = Math.min(result, steps3);
+
+        System.out.println(result);
     }
 }
