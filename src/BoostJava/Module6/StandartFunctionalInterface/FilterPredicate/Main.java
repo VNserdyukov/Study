@@ -1,0 +1,31 @@
+package BoostJava.Module6.StandartFunctionalInterface.FilterPredicate;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.function.Predicate;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        ArrayList<Purchase> list = new ArrayList<>();
+        String str = scan.nextLine();
+        while (!"end".equals(str)) {
+            String[] parts = str.split(";");
+            list.add(new Purchase(parts[0], Integer.parseInt(parts[1]), Integer.parseInt(parts[2])));
+            str = scan.nextLine();
+        }
+        printFilter(list, p -> p.getCost() < 200);
+        System.out.println();
+        printFilter(list, p -> p.getName().startsWith("А"));
+    }
+
+    public static void printFilter(List<Purchase> list, Predicate<Purchase> purchases) {
+        for (Purchase purchase : list) {
+            if (purchases.test(purchase)) {
+                System.out.println(purchase);
+            }
+        }
+    }
+
+}
