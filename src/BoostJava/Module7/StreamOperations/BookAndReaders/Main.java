@@ -23,12 +23,10 @@ public class Main {
             readers.add(reader);
         }
 
-        List<Book> allBooks = readers.stream()
-                .flatMap(reader -> reader.getBooks().stream())
+        readers.stream().flatMap(reader -> reader.getBooks().stream())
                 .sorted(Comparator.comparingInt(Book::getNumber))
-                .toList();
+                .forEach(System.out::println);
 
-        allBooks.forEach(System.out::println);
     }
 }
 
