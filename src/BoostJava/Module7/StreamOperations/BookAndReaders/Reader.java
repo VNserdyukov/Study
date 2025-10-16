@@ -8,7 +8,6 @@ public class Reader {
 
     public Reader(String surname) {
         this.surname = surname;
-        this.books = new ArrayList<>();
     }
 
     public Reader(ArrayList<Book> books) {
