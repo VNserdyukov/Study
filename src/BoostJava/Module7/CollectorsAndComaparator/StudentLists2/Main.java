@@ -17,6 +17,9 @@ public class Main {
 
         Map<String, List<Student>>  studentMap = students.stream()
                 .collect(Collectors.groupingBy(Student::getGruppa));
-        studentMap.forEach((k,v) -> System.out.println(k + ":\n" + v));
+
+        studentMap.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .forEach(p -> System.out.println(p.getKey() + ":\n" + p.getValue()));
     }
 }
