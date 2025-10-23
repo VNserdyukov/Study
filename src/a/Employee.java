@@ -1,4 +1,4 @@
-package BoostJava.Module7.CollectorsAndComaparator.SortedList;
+package a;
 
 public class Employee {
     private String name;
