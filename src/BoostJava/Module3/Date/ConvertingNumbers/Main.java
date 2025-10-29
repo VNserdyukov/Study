@@ -8,11 +8,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String input = scan.nextLine();
-        NumberFormat usNumber = NumberFormat.getNumberInstance(Locale.US);
+        String number = scan.nextLine();
+        NumberFormat inputFormat = NumberFormat.getInstance(Locale.forLanguageTag("ru-RU"));
+        NumberFormat outputFormat = NumberFormat.getInstance(Locale.US);
         try {
-            double result = usNumber.parse(input).doubleValue();
-            System.out.println(result);
+            double n = inputFormat.parse(number).doubleValue();
+            System.out.printf(outputFormat.format(n));
         } catch (ParseException ex) {
             System.out.println("ERROR");
         }
